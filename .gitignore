@@ -1,0 +1,5 @@
+# Git ignore
+.DS_Store
+*.zip
+node_modules/
+.env

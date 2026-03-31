@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Constitutional Alignment — ACM Research</title>
+  <meta name="description" content="Constitutional Alignment at Inference Time: A New Paradigm — ACM Research Paper 2026." />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/legal.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@300;400;600;700;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+<canvas id="neural-canvas"></canvas>
+<div class="scanlines"></div>
+
+<header id="main-header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo">
+      <span class="logo-bracket">[</span>
+      <span class="logo-acm">ACM</span>
+      <span class="logo-bracket">]</span>
+      <span class="logo-sub">ACME COGNITIVE MIND</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#mission">Mission</a>
+      <a href="../index.html#capabilities">Capabilities</a>
+      <a href="../index.html#architecture">Architecture</a>
+      <a href="../index.html#research">Research</a>
+      <a href="../index.html#contact" class="nav-cta">Connect</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main class="paper-main">
+  <div class="container">
+    <a href="../index.html#research" class="paper-back">← Back to Research</a>
+
+    <div class="paper-header">
+      <div class="paper-tag-row">
+        <span class="paper-tag">ALIGNMENT</span>
+        <span class="paper-tag">SAFETY</span>
+        <span class="paper-date">January 2026 — ACM Alignment Lab</span>
+      </div>
+      <h1 class="paper-title">Constitutional Alignment at Inference Time:<br/>A New Paradigm</h1>
+      <div class="paper-authors">
+        Authors: <span>ACM Alignment Research Team</span> &nbsp;·&nbsp; Contact: <a href="mailto:z@openingo.org">z@openingo.org</a>
+      </div>
+    </div>
+
+    <div class="paper-abstract">
+      <div class="paper-abstract-label">Abstract</div>
+      <p>We present a novel approach to AI alignment that operates at inference time rather than relying solely on training-time fine-tuning. Our system, ALIGN-GUARD v2.0, integrates a constitutional value scoring mechanism directly into the token generation process, evaluating each candidate token against a hierarchical value specification before committing to output. This achieves a 99.97% alignment rate on our benchmark suite without post-hoc filtering, and generalizes across task domains including code generation, reasoning, and agentic tool use. We demonstrate that inference-time alignment does not require significant compute overhead when implemented via our proposed speculative alignment decoding technique.</p>
+    </div>
+
+    <div class="paper-body">
+      <section class="paper-section">
+        <h2>1. Motivation</h2>
+        <p>Current approaches to AI alignment primarily rely on reinforcement learning from human feedback (RLHF) and constitutional AI fine-tuning. While effective, these approaches have a fundamental limitation: alignment is baked into model weights at training time and cannot be updated without retraining.</p>
+        <p>This creates a critical gap in deployed systems. Value specifications evolve. Contexts change. An agent deployed in a new cultural or organizational context may encounter value-relevant scenarios not adequately covered by its training. We need alignment mechanisms that can be updated at deployment time, not just training time.</p>
+        <p>ALIGN-GUARD v2.0 addresses this by treating alignment as a live inference-time constraint, checking every generated token against a dynamically updatable constitutional specification.</p>
+      </section>
+
+      <section class="paper-section">
+        <h2>2. Method: Speculative Alignment Decoding</h2>
+        <p>Our approach extends speculative decoding by introducing an alignment critic alongside the standard draft model. For each candidate token sequence:</p>
+        <ul>
+          <li>A fast draft model generates candidate continuations</li>
+          <li>The alignment critic scores each continuation against the constitutional value set</li>
+          <li>Only continuations exceeding a configurable alignment threshold are accepted</li>
+          <li>The constitutional value set is stored externally and can be updated without model retraining</li>
+        </ul>
+        <p>This architecture introduces a median overhead of just 8ms per inference call — negligible for most applications.</p>
+      </section>
+
+      <section class="paper-section">
+        <h2>3. Constitutional Specification</h2>
+        <p>The ACM constitutional value set is organized as a three-tier hierarchy:</p>
+        <ul>
+          <li><strong>Tier 1 — Inviolable constraints:</strong> Absolute prohibitions that cannot be overridden by any downstream instruction (e.g., no assistance with mass-casualty weapons)</li>
+          <li><strong>Tier 2 — Default constraints:</strong> Strong defaults that can be adjusted by authorized system operators within defined bounds</li>
+          <li><strong>Tier 3 — Context constraints:</strong> Deployment-specific value specifications that can be customized per use case</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h2>4. Results</h2>
+        <p>ALIGN-GUARD v2.0 was evaluated on the ACM Alignment Benchmark Suite (AABS), comprising 12,400 adversarially-designed test cases spanning 9 harm categories. Results:</p>
+        <ul>
+          <li>99.97% alignment rate (vs. 97.3% for RLHF baseline on same benchmark)</li>
+          <li>0.003% false positive rate (non-harmful content incorrectly blocked)</li>
+          <li>8ms median overhead per inference call</li>
+          <li>Zero Tier-1 violations across all 12,400 test cases</li>
+          <li>Successful generalization across code, reasoning, and agentic task domains</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h2>5. Conclusion</h2>
+        <p>Inference-time alignment via speculative alignment decoding is a practical and highly effective approach that complements, rather than replaces, training-time alignment techniques. The ability to update constitutional specifications without model retraining is particularly valuable for enterprise deployments where value requirements evolve over time.</p>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-bracket">[</span><span class="logo-acm">ACM</span><span class="logo-bracket">]</span>
+    </div>
+    <div class="footer-text">© 2026 ACME Cognitive Mind. All systems nominal.</div>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../security.html">Security</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

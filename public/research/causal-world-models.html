@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Causal World Models — ACM Research</title>
+  <meta name="description" content="Causal World Models for Autonomous Decision-Making Under Uncertainty — ACM Research Paper 2026." />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
+  <link rel="stylesheet" href="../css/legal.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@300;400;600;700;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+<canvas id="neural-canvas"></canvas>
+<div class="scanlines"></div>
+
+<header id="main-header">
+  <div class="header-inner">
+    <a href="../index.html" class="logo">
+      <span class="logo-bracket">[</span>
+      <span class="logo-acm">ACM</span>
+      <span class="logo-bracket">]</span>
+      <span class="logo-sub">ACME COGNITIVE MIND</span>
+    </a>
+    <nav class="nav-links">
+      <a href="../index.html#mission">Mission</a>
+      <a href="../index.html#capabilities">Capabilities</a>
+      <a href="../index.html#architecture">Architecture</a>
+      <a href="../index.html#research">Research</a>
+      <a href="../index.html#contact" class="nav-cta">Connect</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main class="paper-main">
+  <div class="container">
+    <a href="../index.html#research" class="paper-back">← Back to Research</a>
+
+    <div class="paper-header">
+      <div class="paper-tag-row">
+        <span class="paper-tag">COGNITION</span>
+        <span class="paper-tag">CAUSAL REASONING</span>
+        <span class="paper-date">February 2026 — ACM Research Lab</span>
+      </div>
+      <h1 class="paper-title">Causal World Models for Autonomous<br/>Decision-Making Under Uncertainty</h1>
+      <div class="paper-authors">
+        Authors: <span>ACM Research Team</span> &nbsp;·&nbsp; Contact: <a href="mailto:z@openingo.org">z@openingo.org</a>
+      </div>
+    </div>
+
+    <div class="paper-abstract">
+      <div class="paper-abstract-label">Abstract</div>
+      <p>We introduce ACM-CausalNet, a cognitive framework enabling autonomous agents to reason about counterfactuals and long-horizon consequences without requiring additional task-specific training data. By integrating a learned causal graph with a differentiable world-model simulator, ACM-CausalNet demonstrates robust decision-making across distribution-shifted environments while maintaining alignment with specified value constraints. We achieve a 34% improvement in out-of-distribution task success rate compared to prior autoregressive approaches, and demonstrate zero-shot transfer to 12 previously unseen domains.</p>
+    </div>
+
+    <div class="paper-body">
+      <section class="paper-section">
+        <h2>1. Introduction</h2>
+        <p>Current large language model-based agents excel at pattern recognition and statistical inference within their training distribution. However, they exhibit significant performance degradation when faced with novel causal structures — situations where the underlying mechanism, not merely the statistical correlation, drives outcomes.</p>
+        <p>We argue that true autonomous decision-making requires an explicit causal world model: a structured representation of how actions produce effects, mediated through learnable causal mechanisms. Such a model enables agents to reason about hypothetical interventions ("what would happen if I take action A?") and counterfactuals ("what would have happened had I taken action B?") — capabilities essential for robust real-world deployment.</p>
+        <p>ACM-CausalNet addresses this by pairing a neural causal discovery module with a forward dynamics model, jointly trained to support interventional and counterfactual queries at inference time.</p>
+      </section>
+
+      <section class="paper-section">
+        <h2>2. Architecture</h2>
+        <p>ACM-CausalNet consists of three core components:</p>
+        <ul>
+          <li><strong>Causal Discovery Module (CDM):</strong> A variational graph neural network that infers a sparse causal adjacency matrix from observational data, continuously updated during deployment via online learning.</li>
+          <li><strong>Structural Causal Model (SCM):</strong> A neural implementation of a structural equation model, parameterized by the CDM's output, that computes the effect of interventions on any variable in the causal graph.</li>
+          <li><strong>Policy Head:</strong> A decision-making module that queries the SCM for multi-step rollouts and selects actions that maximize expected reward subject to alignment constraints from ACM's ALIGN-GUARD system.</li>
+        </ul>
+        <div class="paper-figure">
+          <div style="display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;padding:1rem 0;">
+            <div style="text-align:center;background:rgba(0,245,255,0.06);border:1px solid rgba(0,245,255,0.2);border-radius:8px;padding:1rem 1.5rem;">
+              <div style="font-family:var(--font-mono);font-size:0.7rem;color:var(--cyan);margin-bottom:0.4rem;">INPUT</div>
+              <div style="font-family:var(--font-mono);font-size:0.8rem;color:var(--white);">Observation</div>
+            </div>
+            <div style="color:var(--cyan);font-size:1.2rem;">→</div>
+            <div style="text-align:center;background:rgba(0,245,255,0.06);border:1px solid rgba(0,245,255,0.2);border-radius:8px;padding:1rem 1.5rem;">
+              <div style="font-family:var(--font-mono);font-size:0.7rem;color:var(--cyan);margin-bottom:0.4rem;">CDM</div>
+              <div style="font-family:var(--font-mono);font-size:0.8rem;color:var(--white);">Causal Graph</div>
+            </div>
+            <div style="color:var(--cyan);font-size:1.2rem;">→</div>
+            <div style="text-align:center;background:rgba(0,245,255,0.1);border:1px solid rgba(0,245,255,0.4);border-radius:8px;padding:1rem 1.5rem;">
+              <div style="font-family:var(--font-mono);font-size:0.7rem;color:var(--cyan);margin-bottom:0.4rem;">SCM</div>
+              <div style="font-family:var(--font-mono);font-size:0.8rem;color:var(--white);">Counterfactuals</div>
+            </div>
+            <div style="color:var(--cyan);font-size:1.2rem;">→</div>
+            <div style="text-align:center;background:rgba(0,245,255,0.06);border:1px solid rgba(0,245,255,0.2);border-radius:8px;padding:1rem 1.5rem;">
+              <div style="font-family:var(--font-mono);font-size:0.7rem;color:var(--cyan);margin-bottom:0.4rem;">OUTPUT</div>
+              <div style="font-family:var(--font-mono);font-size:0.8rem;color:var(--white);">Action</div>
+            </div>
+          </div>
+          <div class="paper-figure-caption">Figure 1: ACM-CausalNet inference pipeline</div>
+        </div>
+      </section>
+
+      <section class="paper-section">
+        <h2>3. Results</h2>
+        <p>We evaluated ACM-CausalNet across 24 benchmark environments spanning robotic manipulation, multi-agent negotiation, and resource allocation domains. Key results include:</p>
+        <ul>
+          <li>34% improvement in out-of-distribution task success rate vs. GPT-4-based baselines</li>
+          <li>Zero-shot transfer to 12 previously unseen domains with >60% success rate</li>
+          <li>Causal graph accuracy of 91.3% on held-out interventional datasets</li>
+          <li>Alignment constraint satisfaction rate of 99.8% across all evaluated scenarios</li>
+        </ul>
+      </section>
+
+      <section class="paper-section">
+        <h2>4. Conclusion</h2>
+        <p>ACM-CausalNet demonstrates that explicit causal world modeling is a viable and powerful approach to enabling autonomous agents to reason beyond their training distribution. The ability to query counterfactuals at inference time, without additional fine-tuning, opens new possibilities for deploying robust AI agents in dynamic real-world environments.</p>
+        <p>Future work will explore scaling the CDM to larger action spaces and investigating the interaction between causal reasoning and continual learning in deployed systems.</p>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-bracket">[</span><span class="logo-acm">ACM</span><span class="logo-bracket">]</span>
+    </div>
+    <div class="footer-text">© 2026 ACME Cognitive Mind. All systems nominal.</div>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../security.html">Security</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
