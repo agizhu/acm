@@ -546,7 +546,187 @@ img { max-width: 100%; display: block; }
   text-transform: uppercase;
 }
 
-/* ── ARCHITECTURE ── */
+/* ── ARCHITECTURE VISUAL DIAGRAM ── */
+.arch-visual {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  position: relative;
+}
+
+/* Clients row */
+.clients-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 0;
+}
+.arch-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 14px 22px;
+  transition: border-color 0.2s;
+}
+.arch-node:hover { border-color: var(--border-h); }
+.an-icon { font-size: 1.4rem; color: var(--cyan); }
+.an-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 1px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+/* Connector rows */
+.arch-connector-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 2px 0;
+}
+.arch-vline {
+  width: 2px;
+  height: 20px;
+  background: linear-gradient(to bottom, var(--blue), rgba(0,102,255,0.3));
+}
+.arch-vline.accent-vline {
+  background: linear-gradient(to bottom, var(--cyan), rgba(0,245,255,0.3));
+  box-shadow: 0 0 8px rgba(0,245,255,0.4);
+}
+.arch-label-inline {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 2px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  padding: 2px 10px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  background: var(--bg);
+  white-space: nowrap;
+}
+.arch-label-inline.accent-label {
+  color: var(--cyan);
+  border-color: rgba(0,245,255,0.3);
+  box-shadow: 0 0 10px rgba(0,245,255,0.15);
+}
+
+/* Bands */
+.arch-band {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 1.25rem 1.75rem;
+  background: var(--surface);
+  transition: border-color 0.25s;
+}
+.arch-band:hover { border-color: var(--border-h); }
+
+.band-interface    { border-color: rgba(0,102,255,0.3); }
+.band-orchestration{ border-color: rgba(0,102,255,0.25); }
+.band-foundation   { border-color: rgba(0,102,255,0.3); }
+
+.band-core {
+  border-color: rgba(0,245,255,0.5);
+  background: rgba(0, 40, 80, 0.6);
+  box-shadow: 0 0 30px rgba(0,245,255,0.1), inset 0 0 20px rgba(0,245,255,0.04);
+  position: relative;
+}
+
+.band-title {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 3px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+}
+.band-core .band-title {
+  color: var(--cyan);
+  text-shadow: 0 0 10px rgba(0,245,255,0.5);
+}
+
+.band-chips {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.band-chip {
+  background: rgba(0,102,255,0.12);
+  border: 1px solid rgba(0,102,255,0.25);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 5px 14px;
+  border-radius: 100px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+.band-chip.core-chip {
+  background: rgba(0,245,255,0.12);
+  border-color: rgba(0,245,255,0.4);
+  color: var(--cyan);
+  text-shadow: 0 0 8px rgba(0,245,255,0.5);
+}
+
+/* Core internal flow */
+.core-flow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(0,245,255,0.15);
+  flex-wrap: wrap;
+}
+.cf-item {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 1px;
+  color: var(--white);
+  background: rgba(0,245,255,0.08);
+  border: 1px solid rgba(0,245,255,0.2);
+  padding: 4px 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.cf-arrow {
+  color: var(--cyan);
+  opacity: 0.6;
+  font-size: 1rem;
+}
+
+/* Feedback loop */
+.arch-feedback {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+.feedback-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+  opacity: 0.4;
+}
+.feedback-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  color: var(--cyan);
+  opacity: 0.6;
+  white-space: nowrap;
+}
+
+/* ── OLD arch-diagram styles (kept for fallback) ── */
 .arch-diagram {
   max-width: 720px;
   margin: 0 auto;
