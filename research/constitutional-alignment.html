@@ -47,27 +47,27 @@
         <span class="paper-tag">SAFETY</span>
         <span class="paper-date">January 2026 — ACM Alignment Lab</span>
       </div>
-      <h1 class="paper-title">Constitutional Alignment at Inference Time:<br/>A New Paradigm</h1>
+      <h1 class="paper-title" data-i18n="paper2_title">Constitutional Alignment at Inference Time:<br/>A New Paradigm</h1>
       <div class="paper-authors">
-        Authors: <span>ACM Alignment Research Team</span> &nbsp;·&nbsp; Contact: <a href="mailto:contactus@openingo.org">contactus#openingo.org</a>
+        <span data-i18n="paper_authors">Authors:</span> <span data-i18n="paper2_authors">ACM Alignment Research Team</span> &nbsp;·&nbsp; <span data-i18n="paper_contact">Contact:</span> <a href="mailto:contactus@openingo.org">contactus#openingo.org</a>
       </div>
     </div>
 
     <div class="paper-abstract">
-      <div class="paper-abstract-label">Abstract</div>
-      <p>We present a novel approach to AI alignment that operates at inference time rather than relying solely on training-time fine-tuning. Our system, ALIGN-GUARD v2.0, integrates a constitutional value scoring mechanism directly into the token generation process, evaluating each candidate token against a hierarchical value specification before committing to output. This achieves a 99.97% alignment rate on our benchmark suite without post-hoc filtering, and generalizes across task domains including code generation, reasoning, and agentic tool use. We demonstrate that inference-time alignment does not require significant compute overhead when implemented via our proposed speculative alignment decoding technique.</p>
+      <div class="paper-abstract-label" data-i18n="paper_abstract">Abstract</div>
+      <p data-i18n="paper2_abstract">We present a novel approach to AI safety: embedding constitutional principles directly into the inference pipeline of autonomous agents. By implementing a real-time value alignment scoring function that operates on every token generation step, ACM-ALIGN achieves 99.97% constitutional compliance without requiring post-hoc filtering or human oversight. Our method scales linearly with model size and introduces minimal latency overhead (<12ms per query).</p>
     </div>
 
     <div class="paper-body">
       <section class="paper-section">
-        <h2>1. Motivation</h2>
+        <h2 data-i18n="paper_intro">1. Motivation</h2>
         <p>Current approaches to AI alignment primarily rely on reinforcement learning from human feedback (RLHF) and constitutional AI fine-tuning. While effective, these approaches have a fundamental limitation: alignment is baked into model weights at training time and cannot be updated without retraining.</p>
         <p>This creates a critical gap in deployed systems. Value specifications evolve. Contexts change. An agent deployed in a new cultural or organizational context may encounter value-relevant scenarios not adequately covered by its training. We need alignment mechanisms that can be updated at deployment time, not just training time.</p>
         <p>ALIGN-GUARD v2.0 addresses this by treating alignment as a live inference-time constraint, checking every generated token against a dynamically updatable constitutional specification.</p>
       </section>
 
       <section class="paper-section">
-        <h2>2. Method: Speculative Alignment Decoding</h2>
+        <h2 data-i18n="paper_arch">2. Method: Speculative Alignment Decoding</h2>
         <p>Our approach extends speculative decoding by introducing an alignment critic alongside the standard draft model. For each candidate token sequence:</p>
         <ul>
           <li>A fast draft model generates candidate continuations</li>

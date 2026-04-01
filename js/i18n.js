@@ -116,6 +116,70 @@ const ACM_I18N = {
     legal_terms_title: 'Terms of <span class="accent">Service</span>',
     legal_security_lbl: "// SECURITY",
     legal_security_title: 'Security <span class="accent">Program</span>',
+
+    /* ── PRIVACY PAGE ── */
+    priv_overview: "Overview",
+    priv_p1: "ACME Cognitive Mind (\"ACM\", \"we\", \"our\") is committed to protecting the privacy of individuals who interact with our systems, agents, and infrastructure. This Privacy Policy explains what data we collect, how we use it, and the rights you have over your information.",
+    priv_p2: "By accessing or using ACM services, you acknowledge that you have read and understood this policy.",
+    priv_collect: "Information We Collect",
+    priv_collect_p: "We collect information you provide directly (such as email, research inquiries), interaction data (cognitive sessions, system logs), and technical data (IP address, device type).",
+    priv_usage: "How We Use Your Data",
+    priv_usage_p: "Your data is used to improve ACM systems, enable personalized cognitive experiences, conduct research, and maintain security. We do not sell your information to third parties.",
+    priv_rights: "Your Rights",
+    priv_rights_p: "You may request access, correction, or deletion of your data. Contact us to exercise these rights.",
+    priv_contact: "Questions?",
+    priv_contact_p: "For privacy-related inquiries, contact us at: ",
+
+    /* ── TERMS PAGE ── */
+    terms_intro: "By using ACME Cognitive Mind services, you agree to these Terms of Service. These terms govern your access to and use of our cognitive infrastructure, AI agents, and research outputs.",
+    terms_accept: "Acceptance of Terms",
+    terms_accept_p: "Accessing ACM services constitutes acceptance of these terms. If you do not agree, do not use the services.",
+    terms_user: "User Conduct",
+    terms_user_p: "You agree not to use ACM for illegal purposes, reverse engineering, disrupting operations, or violating intellectual property rights.",
+    terms_liability: "Limitation of Liability",
+    terms_liability_p: "ACM is provided \"as is\" without warranties. In no event shall ACM be liable for indirect or consequential damages.",
+    terms_changes: "Changes to Terms",
+    terms_changes_p: "We may modify these terms at any time. Continued use constitutes acceptance of updated terms.",
+    terms_contact: "Contact",
+    terms_contact_p: "For terms-related inquiries: ",
+
+    /* ── SECURITY PAGE ── */
+    sec_commit: "Security Commitment",
+    sec_commit_p: "ACM maintains a comprehensive security program to protect our infrastructure, data, and user interactions. Security is embedded at every layer of our cognitive stack.",
+    sec_reporting: "Responsible Disclosure",
+    sec_reporting_p: "We value the security community. If you discover a vulnerability, please report it to us responsibly.",
+    sec_reporting_contact: "Report it promptly to ",
+    sec_reporting_subject: ' with subject line <code>[SECURITY]</code>',
+    sec_process: "Our Process",
+    sec_process_p1: "We investigate all reports within 48 hours.",
+    sec_process_p2: "We aim to fix critical vulnerabilities within 14 days.",
+    sec_process_p3: "We credit responsible reporters in our acknowledgments.",
+    sec_inquiry: "Security Inquiries",
+    sec_inquiry_p: "For security-related questions or verification requests: ",
+
+    /* ── RESEARCH PAPERS ── */
+    paper_authors: "Authors:",
+    paper_contact: "Contact: ",
+    paper_abstract: "Abstract",
+    paper_intro: "1. Introduction",
+    paper_arch: "2. Architecture",
+    paper_results: "3. Results",
+    paper_conclusion: "4. Conclusion",
+
+    /* Paper 1: Causal World Models */
+    paper1_title: "Causal World Models for Autonomous<br/>Decision-Making Under Uncertainty",
+    paper1_abstract: "We introduce ACM-CausalNet, a cognitive framework enabling autonomous agents to reason about counterfactuals and long-horizon consequences without requiring additional task-specific training data. By integrating a learned causal graph with a differentiable world-model simulator, ACM-CausalNet demonstrates robust decision-making across distribution-shifted environments while maintaining alignment with specified value constraints. We achieve a 34% improvement in out-of-distribution task success rate compared to prior autoregressive approaches, and demonstrate zero-shot transfer to 12 previously unseen domains.",
+    paper1_authors: "ACM Research Team",
+
+    /* Paper 2: Constitutional Alignment */
+    paper2_title: "Constitutional Alignment at Inference Time: A New Paradigm",
+    paper2_abstract: "We present a novel approach to AI safety: embedding constitutional principles directly into the inference pipeline of autonomous agents. By implementing a real-time value alignment scoring function that operates on every token generation step, ACM-ALIGN achieves 99.97% constitutional compliance without requiring post-hoc filtering or human oversight. Our method scales linearly with model size and introduces minimal latency overhead (<12ms per query).",
+    paper2_authors: "ACM Alignment Research Team",
+
+    /* Paper 3: Emergent Cooperation */
+    paper3_title: "Emergent Cooperation in Large-Scale Agent Swarms",
+    paper3_abstract: "Analyzing spontaneous coordination behaviors in ACM's 847-agent deployment, we discovered novel communication protocols that emerged without explicit training. These protocols enable efficient task distribution, conflict resolution, and knowledge sharing across heterogeneous agents. We provide a formal framework for understanding how cooperation emerges from simple individual rules and demonstrate applications to multi-agent robotics and autonomous systems.",
+    paper3_authors: "ACM Agent Systems Team",
   },
 
   zh: {
@@ -220,6 +284,70 @@ const ACM_I18N = {
     legal_terms_title: '服务<span class="accent">条款</span>',
     legal_security_lbl: "// 安全",
     legal_security_title: '安全<span class="accent">计划</span>',
+
+    /* ── PRIVACY PAGE (ZH) ── */
+    priv_overview: "概述",
+    priv_p1: "ACME Cognitive Mind（"ACM"、"我们"）致力于保护与我们的系统、智能体和基础设施互动的个人隐私。本隐私政策解释了我们收集哪些数据、如何使用这些数据以及您对信息的权利。",
+    priv_p2: "访问或使用 ACM 服务即表示您已阅读并理解本政策。",
+    priv_collect: "我们收集的信息",
+    priv_collect_p: "我们收集您直接提供的信息（如电子邮件、研究咨询）、交互数据（认知会话、系统日志）和技术数据（IP 地址、设备类型）。",
+    priv_usage: "我们如何使用您的数据",
+    priv_usage_p: "您的数据用于改进 ACM 系统、启用个性化认知体验、进行研究和维护安全。我们不会将您的信息出售给第三方。",
+    priv_rights: "您的权利",
+    priv_rights_p: "您可以要求访问、更正或删除您的数据。联系我们以行使这些权利。",
+    priv_contact: "有问题？",
+    priv_contact_p: "有关隐私的咨询，请联系：",
+
+    /* ── TERMS PAGE (ZH) ── */
+    terms_intro: "使用 ACME Cognitive Mind 服务即表示您同意这些服务条款。这些条款管辖您访问和使用我们的认知基础设施、AI 智能体和研究输出的权限。",
+    terms_accept: "接受条款",
+    terms_accept_p: "访问 ACM 服务即表示接受这些条款。如果您不同意，请勿使用服务。",
+    terms_user: "用户行为",
+    terms_user_p: "您同意不得将 ACM 用于非法目的、逆向工程、干扰操作或侵犯知识产权。",
+    terms_liability: "责任限制",
+    terms_liability_p: "ACM 按"原样"提供，不提供任何担保。ACM 对间接或后果性损害不承担责任。",
+    terms_changes: "条款变更",
+    terms_changes_p: "我们可能随时修改这些条款。继续使用即表示接受更新后的条款。",
+    terms_contact: "联系方式",
+    terms_contact_p: "有关条款的咨询：",
+
+    /* ── SECURITY PAGE (ZH) ── */
+    sec_commit: "安全承诺",
+    sec_commit_p: "ACM 维护全面的安全计划以保护我们的基础设施、数据和用户交互。安全嵌入在我们认知技术栈的每一层。",
+    sec_reporting: "负责任的披露",
+    sec_reporting_p: "我们重视安全社区。如果您发现漏洞，请负责任地向我们报告。",
+    sec_reporting_contact: "立即向 ",
+    sec_reporting_subject: ' 报告，主题行使用 <code>[SECURITY]</code>',
+    sec_process: "我们的流程",
+    sec_process_p1: "我们在 48 小时内调查所有报告。",
+    sec_process_p2: "我们力争在 14 天内修复关键漏洞。",
+    sec_process_p3: "我们在致谢中认可负责任的报告者。",
+    sec_inquiry: "安全咨询",
+    sec_inquiry_p: "有关安全问题或验证请求：",
+
+    /* ── RESEARCH PAPERS (ZH) ── */
+    paper_authors: "作者：",
+    paper_contact: "联系方式：",
+    paper_abstract: "摘要",
+    paper_intro: "1. 引言",
+    paper_arch: "2. 架构",
+    paper_results: "3. 结果",
+    paper_conclusion: "4. 结论",
+
+    /* Paper 1 */
+    paper1_title: "不确定性下自主决策的因果世界模型",
+    paper1_abstract: "我们提出 ACM-CausalNet，一个使智能体无需额外训练数据即可推理反事实和长期后果的认知框架。通过将学习的因果图与可微世界模型模拟器集成，ACM-CausalNet 在分布偏移环境中展现出鲁棒的决策能力，同时保持与指定价值约束的对齐。我们在分布外任务成功率上比先前的自回归方法提高了 34%，并演示了在 12 个未见域中的零样本迁移。",
+    paper1_authors: "ACM 研究团队",
+
+    /* Paper 2 */
+    paper2_title: "推理时的宪法对齐：一种新范式",
+    paper2_abstract: "我们提出了一种 AI 安全的新方法：将宪法原则直接嵌入自主智能体的推理管线中。通过在每个 token 生成步骤上实现实时价值对齐评分函数，ACM-ALIGN 在无需后处理过滤或人工监督的情况下达到 99.97% 的宪法合规性。我们的方法随模型大小线性扩展，且延迟开销极小（<12 毫秒/查询）。",
+    paper2_authors: "ACM 对齐研究团队",
+
+    /* Paper 3 */
+    paper3_title: "大规模智能体群中的涌现合作",
+    paper3_abstract: "在分析 ACM 847 个智能体部署中的自发协调行为时，我们发现了无需明确训练就涌现出的新型通信协议。这些协议使异构智能体能够高效地分发任务、解决冲突和共享知识。我们提供了理解合作如何从简单个体规则中涌现的形式框架，并演示了在多智能体机器人和自主系统中的应用。",
+    paper3_authors: "ACM 智能体系统团队",
   },
 
   ru: {
@@ -324,6 +452,70 @@ const ACM_I18N = {
     legal_terms_title: 'Условия <span class="accent">обслуживания</span>',
     legal_security_lbl: "// БЕЗОПАСНОСТЬ",
     legal_security_title: 'Программа <span class="accent">безопасности</span>',
+
+    /* ── PRIVACY PAGE (RU) ── */
+    priv_overview: "Обзор",
+    priv_p1: "ACME Cognitive Mind («ACM», «мы») стремится защищать конфиденциальность лиц, взаимодействующих с нашими системами, агентами и инфраструктурой. Настоящая политика конфиденциальности объясняет, какие данные мы собираем, как их используем и какие права вы имеете относительно своей информации.",
+    priv_p2: "Доступ к ACM сервисам или их использование означает, что вы прочитали и поняли настоящую политику.",
+    priv_collect: "Собираемая информация",
+    priv_collect_p: "Мы собираем предоставленную вами информацию (электронная почта, исследовательские запросы), данные взаимодействия (когнитивные сессии, системные журналы) и технические данные (IP-адрес, тип устройства).",
+    priv_usage: "Использование ваших данных",
+    priv_usage_p: "Ваши данные используются для улучшения систем ACM, персонализированного когнитивного опыта, исследований и поддержания безопасности. Мы не продаём вашу информацию третьим лицам.",
+    priv_rights: "Ваши права",
+    priv_rights_p: "Вы можете запросить доступ, исправление или удаление ваших данных. Свяжитесь с нами, чтобы реализовать эти права.",
+    priv_contact: "Вопросы?",
+    priv_contact_p: "По вопросам конфиденциальности обращайтесь: ",
+
+    /* ── TERMS PAGE (RU) ── */
+    terms_intro: "Используя сервисы ACME Cognitive Mind, вы соглашаетесь с настоящими условиями обслуживания. Условия регулируют ваш доступ к и использование нашей когнитивной инфраструктуры, ИИ-агентов и исследовательских материалов.",
+    terms_accept: "Принятие условий",
+    terms_accept_p: "Доступ к сервисам ACM означает принятие настоящих условий. Если вы не согласны, не используйте сервисы.",
+    terms_user: "Поведение пользователя",
+    terms_user_p: "Вы соглашаетесь не использовать ACM для незаконных целей, реверс-инжиниринга, нарушения работы или нарушения прав интеллектуальной собственности.",
+    terms_liability: "Ограничение ответственности",
+    terms_liability_p: "ACM предоставляется «как есть» без гарантий. ACM не несёт ответственности за косвенные или последующие убытки.",
+    terms_changes: "Изменения условий",
+    terms_changes_p: "Мы можем изменить условия в любое время. Продолжение использования означает принятие обновлённых условий.",
+    terms_contact: "Связаться",
+    terms_contact_p: "По вопросам условий обслуживания: ",
+
+    /* ── SECURITY PAGE (RU) ── */
+    sec_commit: "Безопасность",
+    sec_commit_p: "ACM поддерживает комплексную программу безопасности для защиты нашей инфраструктуры, данных и пользовательских взаимодействий. Безопасность встроена на каждом уровне когнитивного стека.",
+    sec_reporting: "Ответственное раскрытие",
+    sec_reporting_p: "Мы ценим сообщество безопасности. Если вы обнаружите уязвимость, сообщите нам ответственно.",
+    sec_reporting_contact: "Срочно сообщите в ",
+    sec_reporting_subject: ' с темой <code>[SECURITY]</code>',
+    sec_process: "Процесс",
+    sec_process_p1: "Мы расследуем все отчёты в течение 48 часов.",
+    sec_process_p2: "Мы стремимся устранить критические уязвимости в течение 14 дней.",
+    sec_process_p3: "Мы упоминаем ответственных информаторов в благодарностях.",
+    sec_inquiry: "Вопросы безопасности",
+    sec_inquiry_p: "По вопросам безопасности или запросам верификации: ",
+
+    /* ── RESEARCH PAPERS (RU) ── */
+    paper_authors: "Авторы:",
+    paper_contact: "Контакт: ",
+    paper_abstract: "Аннотация",
+    paper_intro: "1. Введение",
+    paper_arch: "2. Архитектура",
+    paper_results: "3. Результаты",
+    paper_conclusion: "4. Заключение",
+
+    /* Paper 1 */
+    paper1_title: "Каузальные модели мира для автономного принятия решений в условиях неопределённости",
+    paper1_abstract: "Представляем ACM-CausalNet — когнитивный фреймворк, позволяющий агентам рассуждать о контрфактах и долгосрочных последствиях без дополнительных обучающих данных. Интегрируя обученный каузальный граф с дифференцируемым симулятором модели мира, ACM-CausalNet демонстрирует надёжное принятие решений в условиях сдвига распределения, сохраняя выравнивание с заданными ценностными ограничениями. Улучшили успешность задач вне распределения на 34% по сравнению с предыдущими авторегрессионными подходами и продемонстрировали zero-shot перенос на 12 новых доменов.",
+    paper1_authors: "Команда исследований ACM",
+
+    /* Paper 2 */
+    paper2_title: "Конституциональное выравнивание во время вывода: новая парадигма",
+    paper2_abstract: "Представляем новый подход к безопасности ИИ: встраивание конституционных принципов прямо в пайплайн вывода автономных агентов. Реализуя функцию оценки выравнивания ценностей в реальном времени на каждом шаге генерации токенов, ACM-ALIGN достигает 99,97% конституционной совместимости без постфильтрации или человеческого надзора. Метод масштабируется линейно с размером модели и вносит минимальную задержку (<12 мс на запрос).",
+    paper2_authors: "Команда выравнивания ACM",
+
+    /* Paper 3 */
+    paper3_title: "Эмерджентное сотрудничество в крупномасштабных роях агентов",
+    paper3_abstract: "Анализируя спонтанное координационное поведение в развёртывании 847 агентов ACM, мы выявили новые коммуникационные протоколы, возникшие без явного обучения. Эти протоколы обеспечивают эффективное распределение задач, разрешение конфликтов и обмен знаниями между гетерогенными агентами. Предлагаем формальную структуру для понимания возникновения сотрудничества из простых индивидуальных правил и демонстрируем применение в мультиагентной робототехнике и автономных системах.",
+    paper3_authors: "Команда систем агентов ACM",
   }
 };
 

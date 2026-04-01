@@ -47,27 +47,27 @@
         <span class="paper-tag">CAUSAL REASONING</span>
         <span class="paper-date">February 2026 — ACM Research Lab</span>
       </div>
-      <h1 class="paper-title">Causal World Models for Autonomous<br/>Decision-Making Under Uncertainty</h1>
+      <h1 class="paper-title" data-i18n="paper1_title">Causal World Models for Autonomous<br/>Decision-Making Under Uncertainty</h1>
       <div class="paper-authors">
-        Authors: <span>ACM Research Team</span> &nbsp;·&nbsp; Contact: <a href="mailto:contactus@openingo.org">contactus#openingo.org</a>
+        <span data-i18n="paper_authors">Authors:</span> <span data-i18n="paper1_authors">ACM Research Team</span> &nbsp;·&nbsp; <span data-i18n="paper_contact">Contact:</span> <a href="mailto:contactus@openingo.org">contactus#openingo.org</a>
       </div>
     </div>
 
     <div class="paper-abstract">
-      <div class="paper-abstract-label">Abstract</div>
-      <p>We introduce ACM-CausalNet, a cognitive framework enabling autonomous agents to reason about counterfactuals and long-horizon consequences without requiring additional task-specific training data. By integrating a learned causal graph with a differentiable world-model simulator, ACM-CausalNet demonstrates robust decision-making across distribution-shifted environments while maintaining alignment with specified value constraints. We achieve a 34% improvement in out-of-distribution task success rate compared to prior autoregressive approaches, and demonstrate zero-shot transfer to 12 previously unseen domains.</p>
+      <div class="paper-abstract-label" data-i18n="paper_abstract">Abstract</div>
+      <p data-i18n="paper1_abstract">We introduce ACM-CausalNet, a cognitive framework enabling autonomous agents to reason about counterfactuals and long-horizon consequences without requiring additional task-specific training data. By integrating a learned causal graph with a differentiable world-model simulator, ACM-CausalNet demonstrates robust decision-making across distribution-shifted environments while maintaining alignment with specified value constraints. We achieve a 34% improvement in out-of-distribution task success rate compared to prior autoregressive approaches, and demonstrate zero-shot transfer to 12 previously unseen domains.</p>
     </div>
 
     <div class="paper-body">
       <section class="paper-section">
-        <h2>1. Introduction</h2>
+        <h2 data-i18n="paper_intro">1. Introduction</h2>
         <p>Current large language model-based agents excel at pattern recognition and statistical inference within their training distribution. However, they exhibit significant performance degradation when faced with novel causal structures — situations where the underlying mechanism, not merely the statistical correlation, drives outcomes.</p>
         <p>We argue that true autonomous decision-making requires an explicit causal world model: a structured representation of how actions produce effects, mediated through learnable causal mechanisms. Such a model enables agents to reason about hypothetical interventions ("what would happen if I take action A?") and counterfactuals ("what would have happened had I taken action B?") — capabilities essential for robust real-world deployment.</p>
         <p>ACM-CausalNet addresses this by pairing a neural causal discovery module with a forward dynamics model, jointly trained to support interventional and counterfactual queries at inference time.</p>
       </section>
 
       <section class="paper-section">
-        <h2>2. Architecture</h2>
+        <h2 data-i18n="paper_arch">2. Architecture</h2>
         <p>ACM-CausalNet consists of three core components:</p>
         <ul>
           <li><strong>Causal Discovery Module (CDM):</strong> A variational graph neural network that infers a sparse causal adjacency matrix from observational data, continuously updated during deployment via online learning.</li>
