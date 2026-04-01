@@ -1,4 +1,13 @@
-# Git ignore
+# Git ignore — only public/ is tracked
+
+# Ignore everything at the root level
+/*
+
+# But explicitly keep these:
+!public/
+!.gitignore
+
+# Common system files
 .DS_Store
 *.zip
 node_modules/
