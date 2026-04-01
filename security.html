@@ -56,22 +56,22 @@
       <div class="sec-status-grid">
         <div class="sec-status-card">
           <div class="ssc-icon">◉</div>
-          <div class="ssc-label">Infrastructure</div>
+          <div class="ssc-label" data-i18n="sec_infra">Infrastructure</div>
           <div class="ssc-value online">SECURE</div>
         </div>
         <div class="sec-status-card">
           <div class="ssc-icon">⬡</div>
-          <div class="ssc-label">API Layer</div>
+          <div class="ssc-label" data-i18n="sec_api">API Layer</div>
           <div class="ssc-value online">NOMINAL</div>
         </div>
         <div class="sec-status-card">
           <div class="ssc-icon">◈</div>
-          <div class="ssc-label">Alignment Guard</div>
+          <div class="ssc-label" data-i18n="sec_align">Alignment Guard</div>
           <div class="ssc-value online">ENGAGED</div>
         </div>
         <div class="sec-status-card">
           <div class="ssc-icon">⬟</div>
-          <div class="ssc-label">Agent Sandbox</div>
+          <div class="ssc-label" data-i18n="sec_sandbox">Agent Sandbox</div>
           <div class="ssc-value online">ISOLATED</div>
         </div>
       </div>
@@ -79,29 +79,29 @@
       <section class="legal-section">
         <h2 data-i18n="sec_commit">Our Security Philosophy</h2>
         <p data-i18n="sec_commit_p">Security at ACM is not an afterthought — it is embedded at every layer of our cognitive stack. From the neural substrate to the interface layer, each component is designed with a zero-trust architecture and continuous threat monitoring.</p>
-        <p>We apply defense-in-depth across all systems, with particular focus on the unique threat surface presented by autonomous AI agents operating in production environments.</p>
+        <p data-i18n="sec_commit_p2">We apply defense-in-depth across all systems, with particular focus on the unique threat surface presented by autonomous AI agents operating in production environments.</p>
       </section>
 
       <section class="legal-section">
-        <h2>Infrastructure Security</h2>
+        <h2 data-i18n="sec_infra_sec">Infrastructure Security</h2>
         <ul>
-          <li><strong>Zero-trust network architecture</strong> — no implicit trust between components</li>
-          <li><strong>End-to-end encryption</strong> — all data in transit uses TLS 1.3+; all data at rest is AES-256 encrypted</li>
-          <li><strong>Hardware security modules (HSM)</strong> — for cryptographic key management</li>
-          <li><strong>Isolated agent sandboxes</strong> — each deployed agent operates in a separate compute environment</li>
-          <li><strong>Continuous threat detection</strong> — real-time anomaly detection on all system telemetry</li>
+          <li data-i18n="sec_infra_li1"><strong>Zero-trust network architecture</strong> — no implicit trust between components</li>
+          <li data-i18n="sec_infra_li2"><strong>End-to-end encryption</strong> — all data in transit uses TLS 1.3+; all data at rest is AES-256 encrypted</li>
+          <li data-i18n="sec_infra_li3"><strong>Hardware security modules (HSM)</strong> — for cryptographic key management</li>
+          <li data-i18n="sec_infra_li4"><strong>Isolated agent sandboxes</strong> — each deployed agent operates in a separate compute environment</li>
+          <li data-i18n="sec_infra_li5"><strong>Continuous threat detection</strong> — real-time anomaly detection on all system telemetry</li>
         </ul>
       </section>
 
       <section class="legal-section">
-        <h2>AI-Specific Security</h2>
-        <p>Operating autonomous AI agents introduces unique security considerations. ACM's approach includes:</p>
+        <h2 data-i18n="sec_ai_sec">AI-Specific Security</h2>
+        <p data-i18n="sec_ai_sec_p">Operating autonomous AI agents introduces unique security considerations. ACM's approach includes:</p>
         <ul>
-          <li><strong>Prompt injection defense</strong> — multi-layer filtering to prevent adversarial inputs from hijacking agent behavior</li>
-          <li><strong>Action boundary enforcement</strong> — agents operate within explicitly defined action spaces with no implicit capability expansion</li>
-          <li><strong>Real-time alignment monitoring</strong> — every agent action is scored against alignment criteria before execution</li>
-          <li><strong>Audit trail</strong> — immutable, append-only logs of all agent decisions and actions</li>
-          <li><strong>Kill switch protocol</strong> — any agent can be halted within 50ms if anomalous behavior is detected</li>
+          <li data-i18n="sec_ai_li1"><strong>Prompt injection defense</strong> — multi-layer filtering to prevent adversarial inputs from hijacking agent behavior</li>
+          <li data-i18n="sec_ai_li2"><strong>Action boundary enforcement</strong> — agents operate within explicitly defined action spaces with no implicit capability expansion</li>
+          <li data-i18n="sec_ai_li3"><strong>Real-time alignment monitoring</strong> — every agent action is scored against alignment criteria before execution</li>
+          <li data-i18n="sec_ai_li4"><strong>Audit trail</strong> — immutable, append-only logs of all agent decisions and actions</li>
+          <li data-i18n="sec_ai_li5"><strong>Kill switch protocol</strong> — any agent can be halted within 50ms if anomalous behavior is detected</li>
         </ul>
       </section>
 
@@ -109,17 +109,17 @@
         <h2 data-i18n="sec_reporting">Vulnerability Disclosure</h2>
         <p data-i18n="sec_reporting_p">ACM operates a responsible disclosure program. If you discover a security vulnerability in any ACM system, we ask that you:</p>
         <ol>
-          <li><span data-i18n="sec_reporting_contact">Report it promptly to </span><a href="mailto:contactus@openingo.org">contactus#openingo.org</a><span data-i18n="sec_reporting_subject"> with subject line <code>[SECURITY]</code></span></li>
-          <li>Provide sufficient detail to reproduce the issue</li>
-          <li>Allow ACM reasonable time to investigate and remediate before public disclosure</li>
-          <li>Avoid accessing, modifying, or deleting data beyond what is necessary to demonstrate the vulnerability</li>
+          <li data-i18n="sec_disc_li1">Report it promptly to <a href="mailto:contactus@openingo.org">contactus#openingo.org</a> with subject line <code>[SECURITY]</code></li>
+          <li data-i18n="sec_disc_li2">Provide sufficient detail to reproduce the issue</li>
+          <li data-i18n="sec_disc_li3">Allow ACM reasonable time to investigate and remediate before public disclosure</li>
+          <li data-i18n="sec_disc_li4">Avoid accessing, modifying, or deleting data beyond what is necessary to demonstrate the vulnerability</li>
         </ol>
         <p data-i18n="sec_process_p1">We commit to acknowledging valid reports within <strong>48 hours</strong> and providing a remediation timeline within <strong>7 business days</strong>.</p>
       </section>
 
       <section class="legal-section">
-        <h2>Compliance</h2>
-        <p>ACM maintains compliance with the following frameworks and regulations:</p>
+        <h2 data-i18n="sec_compliance">Compliance</h2>
+        <p data-i18n="sec_compliance_p">ACM maintains compliance with the following frameworks and regulations:</p>
         <ul>
           <li>SOC 2 Type II (annual audit)</li>
           <li>ISO 27001 certified</li>
@@ -132,7 +132,7 @@
       <section class="legal-section">
         <h2 data-i18n="sec_inquiry">Contact</h2>
         <p data-i18n="sec_inquiry_p">Security inquiries: <a href="mailto:contactus@openingo.org">contactus#openingo.org</a></p>
-        <p>Subject line: <code>[SECURITY]</code></p>
+        <p data-i18n="sec_inquiry_p2">Subject line: <code>[SECURITY]</code></p>
       </section>
     </div>
   </div>
